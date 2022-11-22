@@ -1,0 +1,132 @@
+* {
+  color:white;
+  font-family: cursive;
+  text-decoration: none;
+  background: none;
+  
+}
+body{
+    background-color: black;
+
+}
+
+#container {
+  display: grid;
+  margin: none;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 10px;
+  grid-template-areas:
+    "a a a a"
+    "b b f f"
+    "c c g g"
+    "d d d d"
+    "e e e e";
+}
+
+#container > div:nth-child(1) {
+  grid-area: a;
+  border-radius: 5px;
+  background-color: rgba(112, 109, 109,.5);
+  padding: 0 0 15px 0 ;
+  color:black;
+}
+#container > div:nth-child(2) {
+  grid-area: b;
+}
+#container > div:nth-child(3) {
+  grid-area: c;
+}
+#container > div:nth-child(4) {
+  grid-area: d;
+}
+#container > div:nth-child(5) {
+  grid-area: e;
+  background-color: rgba(112, 109, 109,.5);
+  border-radius: 5px;
+  
+}
+
+.social-media ul li {
+  display: inline-block;
+  line-height: 15px;
+  margin: 0 5px;
+  background: none;
+}
+
+.social-media div a {
+  text-decoration: none;
+  color: white;
+background-color: black;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+a:hover {
+  background-color: rgba(0,0, 0, 0.5);
+  transition: 0.5s;
+}
+table {
+  margin: 30px 0 0 0;
+  width: 30%;
+}
+details {
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px black;
+}
+
+details > summary {
+  width: 100px;
+  margin: 0;
+  padding:2px;
+  height: 20px;
+  color:black;
+  background-color:rgba(112, 109, 109,.5);
+  border-radius:3px;
+}
+#dropdwn{
+  padding:10px 5px;
+  
+
+}
+#subheading{
+    background-color:rgba(112, 109, 109,.5) ;
+    border-radius: 5px;
+    padding: 2px;
+    color:black;
+}
+h1 {
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,auto);
+  }
+  #container > div:nth-child(1){
+    padding:0 0 15px 0;
+    font-size:15px;
+  }
+  a,b,c,d,e{
+    grid-column-start: span 1;
+  } 
+}
+@media(max-width:425px){
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,auto);
+  }
+  #container > div:nth-child(1){
+    padding:0 0 15px 0;
+    font-size:15px;
+  }
+  a,b,c,d,e{
+    grid-column-start: span 1;
+  } 
+  .social-media div a{
+    padding:5px 10px ;
+    font-size: 10px;
+    display:block;
+  }
+}
